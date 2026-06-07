@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ocean Facts — Minigames</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav class="nav">
+    <a class="nav__brand" href="index.html">🌊 Ocean<span>Facts</span></a>
+    <div class="nav__links">
+      <a href="index.html">Home</a>
+      <a href="facts.html">Facts</a>
+      <a href="quiz.html">Quizzes</a>
+      <a href="games.html" class="active">Games</a>
+      <a href="books.html">Books</a>
+      <a href="papers.html">Papers</a>
+    </div>
+  </nav>
+
+  <main class="container">
+    <!-- Screen 0: game selection -->
+    <section id="games-list-screen">
+      <h1>Minigames</h1>
+      <p class="muted">Play, and learn something about the ocean while you're at it.</p>
+      <div class="grid" id="games-list">
+        <article class="card game-card" data-game="memory">
+          <span class="emoji">🃏</span>
+          <h3>Memory Match</h3>
+          <p>Flip cards to match sea creatures. Every match reveals a fact about it.</p>
+        </article>
+        <article class="card game-card" data-game="zones">
+          <span class="emoji">🌊</span>
+          <h3>Which Zone?</h3>
+          <p>Send each creature to the right ocean depth: Sunlight, Twilight or Midnight.</p>
+        </article>
+        <article class="card game-card" data-game="cleanup">
+          <span class="emoji">🗑️</span>
+          <h3>Ocean Cleanup</h3>
+          <p>Tap the trash to clean the sea — but spare the wildlife! 30 seconds on the clock.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Game: Memory Match -->
+    <section id="game-memory-screen" class="hidden">
+      <button class="btn btn--ghost btn--small back-to-games">← All games</button>
+      <h1>Memory Match</h1>
+      <p class="muted">Moves: <span id="memory-moves">0</span> · Pairs found: <span id="memory-found">0</span></p>
+      <div class="memory-grid" id="memory-grid"></div>
+      <div class="game-log" id="memory-log"></div>
+      <div id="memory-win" class="card results hidden">
+        <p class="rank">🎉 You matched them all!</p>
+        <p class="muted">Finished in <span id="memory-final-moves">0</span> moves.</p>
+        <div class="actions">
+          <button class="btn btn--primary" id="memory-replay">Play again</button>
+          <button class="btn btn--ghost back-to-games">All games</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Game: Which Zone? -->
+    <section id="game-zones-screen" class="hidden">
+      <button class="btn btn--ghost btn--small back-to-games">← All games</button>
+      <h1>Which Zone?</h1>
+      <div id="zones-play">
+        <div class="quiz-progress" id="zones-progress"></div>
+        <div class="quiz-bar"><div class="quiz-bar__fill" id="zones-bar"></div></div>
+        <div class="zones-prompt" id="zones-prompt"></div>
+        <div class="zone-options">
+          <button class="option zone-btn" data-zone="sunlight">☀️ Sunlight Zone<br><small>0–200 m</small></button>
+          <button class="option zone-btn" data-zone="twilight">🌒 Twilight Zone<br><small>200–1000 m</small></button>
+          <button class="option zone-btn" data-zone="midnight">🌑 Midnight Zone<br><small>1000 m +</small></button>
+        </div>
+        <div class="quiz-feedback" id="zones-feedback"></div>
+        <button class="btn btn--primary hidden" id="zones-next">Next</button>
+      </div>
+      <div id="zones-results" class="card results hidden">
+        <p class="muted">You sorted</p>
+        <div class="score" id="zones-score"></div>
+        <p class="rank" id="zones-rank"></p>
+        <div class="actions">
+          <button class="btn btn--primary" id="zones-replay">Play again</button>
+          <button class="btn btn--ghost back-to-games">All games</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Game: Ocean Cleanup -->
+    <section id="game-cleanup-screen" class="hidden">
+      <button class="btn btn--ghost btn--small back-to-games">← All games</button>
+      <h1>Ocean Cleanup</h1>
+      <div class="cleanup-hud">
+        <span>Score: <strong id="cleanup-score">0</strong></span>
+        <span>Time: <strong id="cleanup-time">30</strong>s</span>
+      </div>
+      <div class="cleanup-area" id="cleanup-area">
+        <div class="cleanup-overlay" id="cleanup-start">
+          <p>Tap the floating <strong>trash</strong> 🛍️🥤🧴 to remove it.<br />
+             Don't tap the <strong>sea life</strong> 🐢🐬🐠 — that costs points!</p>
+          <button class="btn btn--primary" id="cleanup-go">Start cleaning</button>
+        </div>
+      </div>
+      <div id="cleanup-results" class="card results hidden">
+        <p class="muted">Final score</p>
+        <div class="score" id="cleanup-final"></div>
+        <p class="rank" id="cleanup-rank"></p>
+        <p class="muted" id="cleanup-tip"></p>
+        <div class="actions">
+          <button class="btn btn--primary" id="cleanup-replay">Play again</button>
+          <button class="btn btn--ghost back-to-games">All games</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    Made with 💙 for ocean lovers. Keep our seas blue.
+  </footer>
+
+  <script src="data/facts.js"></script>
+  <script src="data/quizzes.js"></script>
+  <script src="data/games.js"></script>
+  <script src="app.js"></script>
+  <script src="games.js"></script>
+</body>
+</html>

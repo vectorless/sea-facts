@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ocean Facts — Papers</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav class="nav">
+    <a class="nav__brand" href="index.html">🌊 Ocean<span>Facts</span></a>
+    <div class="nav__links">
+      <a href="index.html">Home</a>
+      <a href="facts.html">Facts</a>
+      <a href="quiz.html">Quizzes</a>
+      <a href="games.html">Games</a>
+      <a href="books.html">Books</a>
+      <a href="papers.html" class="active">Papers</a>
+    </div>
+  </nav>
+
+  <main class="container">
+    <!-- Worksheet selection -->
+    <section id="papers-list-screen">
+      <h1>Fill-in worksheets</h1>
+      <p class="muted">Complete the blanks, then check your answers. Hint: the Facts and Books pages have everything you need.</p>
+      <div class="grid" id="papers-list"><!-- worksheet cards injected here --></div>
+    </section>
+
+    <!-- Active worksheet -->
+    <section id="paper-screen" class="hidden">
+      <button class="btn btn--ghost btn--small" id="paper-back">← All worksheets</button>
+      <article class="paper">
+        <h1 id="paper-title"></h1>
+        <p class="muted" id="paper-desc"></p>
+        <ol class="paper-items" id="paper-items"><!-- fill-in lines injected here --></ol>
+        <div class="quiz-feedback" id="paper-feedback"></div>
+        <div class="actions">
+          <button class="btn btn--primary" id="paper-check">Check answers</button>
+          <button class="btn btn--ghost" id="paper-reveal">Show answers</button>
+          <button class="btn btn--ghost" id="paper-reset">Reset</button>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="footer">
+    Made with 💙 for ocean lovers. Keep our seas blue.
+  </footer>
+
+  <script src="data/facts.js"></script>
+  <script src="data/quizzes.js"></script>
+  <script src="data/books.js"></script>
+  <script src="data/worksheets.js"></script>
+  <script src="app.js"></script>
+  <script src="library.js"></script>
+</body>
+</html>

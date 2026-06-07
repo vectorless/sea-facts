@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ocean Facts — Browse</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav class="nav">
+    <a class="nav__brand" href="index.html">🌊 Ocean<span>Facts</span></a>
+    <div class="nav__links">
+      <a href="index.html">Home</a>
+      <a href="facts.html" class="active">Facts</a>
+      <a href="quiz.html">Quizzes</a>
+      <a href="games.html">Games</a>
+      <a href="books.html">Books</a>
+      <a href="papers.html">Papers</a>
+    </div>
+  </nav>
+
+  <main class="container">
+    <h1>Ocean facts</h1>
+    <p class="muted">Pick a category, or browse them all.</p>
+
+    <div class="filters" id="filters"><!-- filter buttons injected here --></div>
+    <div class="grid" id="facts-grid"><!-- fact cards injected here --></div>
+  </main>
+
+  <footer class="footer">
+    Made with 💙 for ocean lovers. Keep our seas blue.
+  </footer>
+
+  <script src="data/facts.js"></script>
+  <script src="data/quizzes.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

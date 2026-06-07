@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ocean Facts — Books</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav class="nav">
+    <a class="nav__brand" href="index.html">🌊 Ocean<span>Facts</span></a>
+    <div class="nav__links">
+      <a href="index.html">Home</a>
+      <a href="facts.html">Facts</a>
+      <a href="quiz.html">Quizzes</a>
+      <a href="games.html">Games</a>
+      <a href="books.html" class="active">Books</a>
+      <a href="papers.html">Papers</a>
+    </div>
+  </nav>
+
+  <main class="container">
+    <!-- Library: book selection -->
+    <section id="books-list-screen">
+      <h1>Ocean books</h1>
+      <p class="muted">Short reads you can flip through, one page at a time.</p>
+      <div class="grid" id="books-list"><!-- book cards injected here --></div>
+    </section>
+
+    <!-- Reader -->
+    <section id="book-reader-screen" class="hidden">
+      <button class="btn btn--ghost btn--small" id="book-back">← All books</button>
+      <article class="book">
+        <h1 id="book-title"></h1>
+        <div class="book-page">
+          <div class="book-art" id="book-art"></div>
+          <p class="book-text" id="book-text"></p>
+        </div>
+        <div class="book-nav">
+          <button class="btn btn--ghost" id="book-prev">← Prev</button>
+          <span class="book-progress" id="book-progress"></span>
+          <button class="btn btn--primary" id="book-next">Next →</button>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="footer">
+    Made with 💙 for ocean lovers. Keep our seas blue.
+  </footer>
+
+  <script src="data/facts.js"></script>
+  <script src="data/quizzes.js"></script>
+  <script src="data/books.js"></script>
+  <script src="data/worksheets.js"></script>
+  <script src="app.js"></script>
+  <script src="library.js"></script>
+</body>
+</html>

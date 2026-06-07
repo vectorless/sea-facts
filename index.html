@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ocean Facts — Dive Into the Blue</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav class="nav">
+    <a class="nav__brand" href="index.html">🌊 Ocean<span>Facts</span></a>
+    <div class="nav__links">
+      <a href="index.html" class="active">Home</a>
+      <a href="facts.html">Facts</a>
+      <a href="quiz.html">Quizzes</a>
+      <a href="games.html">Games</a>
+      <a href="books.html">Books</a>
+      <a href="papers.html">Papers</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <h1>Dive into the <span class="wave">deep blue</span></h1>
+    <p>
+      The ocean covers most of our planet, yet we've explored barely a fraction of it.
+      Discover surprising facts about the creatures, depths and reefs below — then test
+      yourself with a quiz.
+    </p>
+    <div class="hero__cta">
+      <a class="btn btn--primary" href="facts.html">Explore the facts</a>
+      <a class="btn btn--ghost" href="quiz.html">Take a quiz</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <h2 class="section-title">🐚 Fact of the day</h2>
+    <article class="card fotd" id="fact-of-day">
+      <p class="muted">Loading a fact from the deep…</p>
+    </article>
+
+    <h2 class="section-title">Where to next?</h2>
+    <div class="choices">
+      <a class="card choice" href="facts.html">
+        <span class="emoji">🐠</span>
+        <h3>Browse the facts</h3>
+        <p>Curious tidbits about creatures, the deep sea, reefs, tides and conservation.</p>
+      </a>
+      <a class="card choice" href="quiz.html">
+        <span class="emoji">🧠</span>
+        <h3>Take a quiz</h3>
+        <p>Multiple-choice quizzes with instant feedback and a final score. How deep can you go?</p>
+      </a>
+      <a class="card choice" href="games.html">
+        <span class="emoji">🎮</span>
+        <h3>Play a minigame</h3>
+        <p>Memory match, depth-zone sorting and an ocean cleanup — learn while you play.</p>
+      </a>
+      <a class="card choice" href="books.html">
+        <span class="emoji">📖</span>
+        <h3>Read a book</h3>
+        <p>Short illustrated ocean reads you can flip through, one page at a time.</p>
+      </a>
+      <a class="card choice" href="papers.html">
+        <span class="emoji">📝</span>
+        <h3>Fill in a worksheet</h3>
+        <p>Fill-in-the-blank papers that check your answers as you go.</p>
+      </a>
+    </div>
+  </main>
+
+  <footer class="footer">
+    Made with 💙 for ocean lovers. Keep our seas blue.
+  </footer>
+
+  <script src="data/facts.js"></script>
+  <script src="data/quizzes.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

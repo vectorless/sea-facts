@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ocean Facts — Quizzes</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav class="nav">
+    <a class="nav__brand" href="index.html">🌊 Ocean<span>Facts</span></a>
+    <div class="nav__links">
+      <a href="index.html">Home</a>
+      <a href="facts.html">Facts</a>
+      <a href="quiz.html" class="active">Quizzes</a>
+      <a href="games.html">Games</a>
+      <a href="books.html">Books</a>
+      <a href="papers.html">Papers</a>
+    </div>
+  </nav>
+
+  <main class="container">
+    <!-- Screen 1: quiz selection -->
+    <section id="quiz-list-screen">
+      <h1>Quizzes</h1>
+      <p class="muted">Choose a quiz and see how deep your ocean knowledge goes.</p>
+      <div class="grid" id="quiz-list"><!-- quiz cards injected here --></div>
+    </section>
+
+    <!-- Screen 2: active quiz -->
+    <section id="quiz-play-screen" class="hidden">
+      <h1 id="quiz-title"></h1>
+      <div class="quiz-progress" id="quiz-progress"></div>
+      <div class="quiz-bar"><div class="quiz-bar__fill" id="quiz-bar-fill"></div></div>
+      <p class="question" id="question-text"></p>
+      <div class="options" id="options"></div>
+      <div class="quiz-feedback" id="feedback"></div>
+      <button class="btn btn--primary hidden" id="next-btn">Next</button>
+    </section>
+
+    <!-- Screen 3: results -->
+    <section id="quiz-results-screen" class="hidden">
+      <div class="card results">
+        <p class="muted">You scored</p>
+        <div class="score" id="result-score"></div>
+        <p class="rank" id="result-rank"></p>
+        <p class="muted" id="result-message"></p>
+        <div class="actions">
+          <button class="btn btn--primary" id="retry-btn">Try again</button>
+          <button class="btn btn--ghost" id="back-btn">Back to quizzes</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    Made with 💙 for ocean lovers. Keep our seas blue.
+  </footer>
+
+  <script src="data/facts.js"></script>
+  <script src="data/quizzes.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
